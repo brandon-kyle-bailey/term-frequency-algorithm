@@ -1,15 +1,7 @@
+**Build Status**: [![Build Status](https://github.com/brandon-kyle-bailey/repo-badges/blob/master/svg/build-passing.svg)]
+
 # term-frequency-algorithm
-Written in Python 3.7, This application is designed to return search query items using a "Term frequency Algorithm".
-
-**Build Status**: [![Build Status](https://github.com/BrandonsGitRepo/repo-badges/blob/master/svg/build-passing.svg)](https://github.com/BrandonsGitRepo/project-environment-manager/tree/master/manager)
-
-
-# project-environment-manager
-
-Fun little project manager written in Python 3.7.
-
-
-tool can function from a "project_template.json" or from a built-in template.
+Written in Python 3, This application is designed to return search query items using a "Term frequency Algorithm".
 
 
 ## Getting Started
@@ -46,31 +38,11 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
+## Running the application
 
 ## Built With
 
-Python3.7.3
+Python3
 
 ## Authors
 
