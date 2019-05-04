@@ -17,7 +17,7 @@ responsible for the datas visibility. `Higher = More likely / Lower = Less likel
 
 ```
   - Unzip the file
-  - cd term-frequency-algorithm/app
+  - cd term-frequency-algorithm
   - run "python virtualenv venv"
   - run "source venv/bin/activate"
   - run "venv/bin/pip install python3"
