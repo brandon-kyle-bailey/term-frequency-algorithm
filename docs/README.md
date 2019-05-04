@@ -150,7 +150,7 @@ The json data is parsed to a variable that can be manipulated without sacrificin
 - append that specific element to the `top_rank_list` and
 - remove the element in question from `temp_data`
 
-Once this is complete, the data is returned to the user in a *0-N*as seen above.
+Once this is complete, the data is returned to the user in a *0-Nth* as seen above.
 
 
 ## Built With
