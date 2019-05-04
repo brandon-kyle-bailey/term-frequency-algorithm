@@ -146,11 +146,11 @@ class Search:
 
             # here we flattern the two frequency dictionaries to get
             # a single dictionary of words and their frequency values.
-            out_dict = name_frequency_value.copy()
+            sum_dict = name_frequency_value.copy()
             for key, value in name_frequency_value.items():
-                out_dict[key] += brand_frequency_value[key]
+                sum_dict[key] += brand_frequency_value[key]
 
-            entry['score'] = sum(out_dict.values())
+            entry['score'] = sum(sum_dict.values())
 
         # return top ranking entries
         top_ranking = self.get_top_ranking(json_data, level=10)
