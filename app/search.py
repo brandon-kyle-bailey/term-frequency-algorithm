@@ -93,7 +93,9 @@ class Search:
 
 
 		top_ranking = self.get_top_ranking(json_data, level=10)
-		for num, i in enumerate(top_ranking): print(num, i)
+
+                for num, i in enumerate(top_ranking): 
+                    print(num, i)
 
 
 if __name__ == "__main__":
