@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -16,10 +16,9 @@ class Search:
 
 	def get_data_set(self, filename):
 
-		json_file = os.path.join(os.getcwd(),
-									filename)
+		json_file = os.path.join(os.getcwd(), filename)
 
-		with open(json_file) as data_set:
+		with open(json_file, encoding="utf8") as data_set:
 			data = json.load(data_set)
 
 		return data
