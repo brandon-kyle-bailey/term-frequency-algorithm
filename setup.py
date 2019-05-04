@@ -18,8 +18,8 @@ setup(name='term-frequency-algorithm',
       author_email='brandonkylebailey@outlook.com',
       license='None',
       packages=['app'],
-      install_requires=[
-          'Python>=3.7.3',
-      ],
+      # install_requires=[
+      #     'Python>=3.7.3',
+      # ],
       include_package_data=True,
       zip_safe=False)

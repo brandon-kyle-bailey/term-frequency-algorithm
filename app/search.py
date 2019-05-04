@@ -12,6 +12,9 @@ class Search:
     def __init__(self):
 
         self.search_query = sys.argv[1:]
+        if not self.search_query:
+            raise RuntimeError("Need to specify search terms.")
+
         self.main()
 
     def get_data_set(self, filename):
