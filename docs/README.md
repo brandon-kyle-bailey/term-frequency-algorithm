@@ -1,4 +1,4 @@
-**Build Status**: [![Build Status](https://github.com/brandon-kyle-bailey/repo-badges/blob/master/svg/build-passing.svg)]
+**Build Status**: ![Build Status](https://github.com/brandon-kyle-bailey/repo-badges/blob/master/svg/build-passing.svg)
 
 # term-frequency-algorithm
 
