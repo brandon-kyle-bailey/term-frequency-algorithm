@@ -55,20 +55,20 @@ In order to retrieve the `search_query` string, `sys.argv` is used:
             raise RuntimeError("Need to specify search terms.")
 
 ```
-if the user runs the tool without parsing any string after the script, a runtime error will occur and notify the user that they
+If the user runs the tool without parsing any string after the script, a `RuntimeError` error will occur and notify the user that they
 need to specify a string after the fact.
 
 The rest of the action happens in the `main` function.
 
 `        json_data = self.get_data_set(filename)`
-this function acts as a wrapper to retrieve a json object of the search data set.
+This function acts as a wrapper to retrieve a json object from the search data set.
 
 ```
         if not os.path.exists(json_file):
             raise RuntimeError("Json file can not be found. Is it in root?")
 
 ```
-if the json file cant be found. a runtime error will occur and notify the user of this.
+If the json file cant be found. a `RuntimeError` error will occur and notify the user of this.
 
 ```
         for entry in json_data:
@@ -82,7 +82,7 @@ if the json file cant be found. a runtime error will occur and notify the user o
 ```
 We then iterate over the data in the json object and call the `get_frequency` function.
 
-This function behaves as a wrapper to another function `get_term_frequency`. This allows us to use the function for different types of input. In this case the `name` and `brand` fields respectively.
+This function behaves as a wrapper to another function `get_term_frequency`. This allows us to use the function for different types of input. In this case the `name` and `brand` keys respectively.
 
 ```
         entry_data = entry.get(name, None)
@@ -93,7 +93,7 @@ This function behaves as a wrapper to another function `get_term_frequency`. Thi
             raise ValueError("entry_data for 'name' field is empty.")
 
 ```
-if no data can be found then a `ValueError` is raised notifying the user there is an issue with the source data.
+If no data can be found then a `ValueError` is raised notifying the user there is an issue with the source data.
 
 `get_term_frequency` returns a dictionary of search items
 and their corresponding frequency score against entry data.
@@ -103,7 +103,7 @@ and their corresponding frequency score against entry data.
         cleaned_entry = ' '.join([item.lower() for item in entry.split(' ')])
 
 ```
-The data is first standardized *converted from upper case to lower case* to allow for more consisten results.
+The data is first standardized, *converted from upper case to lower case*, to allow for more consistent results.
 
 ```
         for word, count in word_dict.items():
@@ -127,7 +127,7 @@ These frequency values are then summed and parsed in to a new `score` key which 
 
 To return the most relevant Nth number of entries in the data, a function called `get_top_ranking` is used.
 
-This function takes default keyword argument `level` with the value `10`.
+This function takes default the keyword argument `level` with the value `10`.
 
 ```
         temp_data = json_data
@@ -146,12 +146,25 @@ This function takes default keyword argument `level` with the value `10`.
 
 The json data is parsed to a variable that can be manipulated without sacrificing the integrity of the json data object should any overwritting take place.
 
-- We iterate Nth number of timeseach time obtaining the max score for all elements in `temp_data`
-- append that specific element to the `top_rank_list` and
-- remove the element in question from `temp_data`
+- We iterate Nth number of times. Each time obtaining the max score for all elements in `temp_data`
+- Then append that specific element to the `top_rank_list`
+- And remove the element in question from `temp_data`
 
-Once this is complete, the data is returned to the user in a *0-Nth* as seen above.
+Once this is complete, the data is returned to the user in a *0-Nth* list as seen above.
 
+```
+0 {'id': 34322, 'name': 'Canada Goose Trillium Parka', 'brand': 'Canada Goose', 'score': 0.24074074074074073}
+1 {'id': 34672, 'name': 'Canada Goose "Chateau" Parka', 'brand': 'Canada Goose', 'score': 0.23809523809523808}
+2 {'id': 26578, 'name': 'Canada Goose Faux Fur Chiliwack Jacket', 'brand': 'Canada Goose', 'score': 0.21929824561403508}
+3 {'id': 26575, 'name': 'Canada Goose Faux Fur Expedition Jacket', 'brand': 'Canada Goose', 'score': 0.21794871794871795}
+4 {'id': 26576, 'name': 'Canada Goose Faux Fur Expedition Jacket', 'brand': 'Canada Goose', 'score': 0.21794871794871795}
+5 {'id': 14054, 'name': 'CONSTABLE Parka', 'brand': 'Canada Goose', 'score': 0.16666666666666666}
+6 {'id': 66784, 'name': 'Snogoose 09', 'brand': 'Baffin', 'score': 0.09090909090909091}
+7 {'id': 62835, 'name': 'Long Sleeve Shirt', 'brand': 'Golden Goose', 'score': 0.08333333333333333}
+8 {'id': 62953, 'name': 'Short Sleeve T-Shirt', 'brand': 'Golden Goose', 'score': 0.08333333333333333}
+9 {'id': 56783, 'name': 'High-Top Sneaker', 'brand': 'Golden Goose', 'score': 0.08333333333333333}
+Executed OK --- 1.0898122787475586 seconds ---
+```
 
 ## Built With
 
