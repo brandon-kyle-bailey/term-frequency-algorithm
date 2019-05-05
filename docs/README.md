@@ -20,12 +20,11 @@ responsible for the datas visibility. `Higher = More likely / Lower = Less likel
   - cd term-frequency-algorithm
   - run "python -m virtualenv venv"
   - run "source venv/bin/activate"
-  - run "venv/bin/pip install python3"
 ```
 ## Running the application
 
 Once python3 is installed to your virtual environment. You can run the program by simply
-navigating to the `/app` directory and running : `../venv/bin/python3 search.py "canada goose"`
+navigating to the `/app` directory and running : `../venv/bin/python search.py "canada goose"`
 
 This will return something along the lines of this:
 
