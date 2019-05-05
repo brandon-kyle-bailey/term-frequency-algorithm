@@ -16,7 +16,7 @@ responsible for the datas visibility. `Higher = More likely / Lower = Less likel
 ## Getting Started
 
 ```
-  - Unzip the file
+  - Unzip the file with : tar -xvf term-frequency-algorithm.tar.gz
   - cd term-frequency-algorithm
   - run "python virtualenv venv"
   - run "source venv/bin/activate"
