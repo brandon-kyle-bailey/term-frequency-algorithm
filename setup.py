@@ -6,7 +6,7 @@ def readme():
 
 setup(name='term-frequency-algorithm',
       version='0.1',
-      description='The funniest joke in the world',
+      description='representation of the term frequency algorithm.',
       long_description=readme(),
       classifiers=[
         'Programming Language :: Python :: 3.7',
