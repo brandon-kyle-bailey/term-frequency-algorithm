@@ -1,5 +1,13 @@
 **Build Status**: ![Build Status](https://github.com/brandon-kyle-bailey/repo-badges/blob/master/svg/build-passing.svg)
 
+## Built With
+
+Python3.7
+
+## Author
+
+* **Brandon Bailey** - *Initial work* - [github-profile](https://github.com/brandon-kyle-bailey)
+
 # term-frequency-algorithm
 
 Written in Python 3, This application is designed to return search query items using a "Term frequency Algorithm".
